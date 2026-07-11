@@ -1,0 +1,4 @@
+baseURL = "https://go-browserhttp.github.io/"
+languageCode = "en-us"
+title = "go-browserhttp"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
