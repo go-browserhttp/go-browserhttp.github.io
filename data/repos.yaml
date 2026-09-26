@@ -1,2 +1,3 @@
 items:
   - { name: "browserhttp", kind: "client", desc: "Pure-Go <code>http.Client</code> presenting a Chrome TLS fingerprint via uTLS. CGO=0." }
+  - { name: "gitcorsproxy", kind: "proxy", desc: "A CORS reverse proxy for git smart-HTTP, so a Go/wasm git client in a browser can reach remotes that speak the protocol correctly and send no <code>Access-Control-Allow-Origin</code> — GitHub, a bare Forgejo. It forwards the git bytes both ways and adds the headers, scoped to an explicit origin list. It stores nothing: the browser holds the user's token and sends it per request, the proxy relays it and forgets it. Standard library only, CGO=0, SSRF-guarded." }
