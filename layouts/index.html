@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{{/* Dark Reader repaints pages that already draw their own dark theme, as this one does: ask it to stand aside. */}}
+<meta name="darkreader-lock">
 <title>{{ .Site.Title }} — a pure-Go http.Client with a Chrome TLS fingerprint</title>
 <meta name="description" content="A pure-Go (CGO=0) http.Client that presents a real Chrome TLS fingerprint via uTLS, so a plain Go client reaches public endpoints many sites 403 for non-browser clients — no host web view, identical on macOS, Linux and Windows.">
 <style>
