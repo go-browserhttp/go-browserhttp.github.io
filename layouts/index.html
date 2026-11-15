@@ -41,12 +41,10 @@
   <div class="hero"><div class="wrap">
     <div>
       <h1 class="head">go-browserhttp</h1>
-      <p class="sub">A pure-Go <code>http.Client</code> with a real <strong>Chrome TLS fingerprint</strong> (uTLS) — bypass anti-bot 403s, <strong>no host web view</strong>.</p>
-      <div class="cta">
-        <a class="btn btn-primary" href="https://go-browserhttp.github.io/docs/">{{ partial "icons/book.html" . }}Documentation</a>
-        <a class="btn btn-ghost" href="https://github.com/go-browserhttp">{{ partial "icons/github.html" . }}GitHub</a>
-      </div>
-      <div class="trust">{{ if not (partial "mantra-on.html" $) }}<span class="pill">CGO_ENABLED=0</span>{{ end }}<span class="pill">Chrome TLS fingerprint (uTLS)</span><span class="pill">no web view</span><span class="pill">macOS · Linux · Windows</span>{{ if not (partial "mantra-on.html" $) }}<span class="pill">BSD-3-Clause</span>{{ end }}</div>
+      <p class="sub">A {{ if partial "mantra-on.html" . }}Go{{ else }}pure-Go{{ end }} <code>http.Client</code> with a real <strong>Chrome TLS fingerprint</strong> (uTLS) — bypass anti-bot 403s, <strong>no host web view</strong>.</p>
+      {{/* [[params.cta]] in hugo.toml: the kit renders the row */}}
+      {{ partial "cta.html" . }}
+      <div class="trust">{{ if not (partial "mantra-on.html" $) }}{{ if not (partial "mantra-on.html" $) }}<span class="pill">CGO_ENABLED=0</span>{{ end }}{{ end }}<span class="pill">Chrome TLS fingerprint (uTLS)</span><span class="pill">no web view</span><span class="pill">macOS · Linux · Windows</span>{{ if not (partial "mantra-on.html" $) }}{{ if not (partial "mantra-on.html" $) }}<span class="pill">BSD-3-Clause</span>{{ end }}{{ end }}</div>
     </div>
     {{ partial "hero-carousel.html" . }}
   </div></div>
